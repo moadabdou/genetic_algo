@@ -1,5 +1,4 @@
 import random
-
 a_i = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"
 a = {char: idx for idx, char in enumerate(" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!")}
 char_space = len(a) - 1
@@ -59,7 +58,7 @@ def eval(target: str, gen_size:int):
     population =  generate_population(gen_size, len(target))
     reference  = fitness_reference(target)
     tager_arr =  word_to_arr(target)
-    for i  in range(2000):
+    for i  in range(300):
         
         population = sorted(
             population,
@@ -67,9 +66,16 @@ def eval(target: str, gen_size:int):
             reverse=True
         )
         
+        target_fitness = fitness(tager_arr, reference, target)
+        current_fitness = fitness(population[0], reference, target)
+
         print( i,
-              f"{fitness(population[0], reference, target)}/{fitness(tager_arr, reference, target)}: ", 
+              f"{current_fitness}/{target_fitness}: ", 
               translate(population[0]))
+        
+        if current_fitness ==  target_fitness : 
+            print ("FOUND !")
+            break
 
         next_gen:list[int] = population[0:2]
 
@@ -81,3 +87,4 @@ def eval(target: str, gen_size:int):
         population = next_gen
 
 eval( "Genetic Algorithm" , 100)                                      
+
