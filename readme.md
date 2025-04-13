@@ -64,3 +64,7 @@ Want it to evolve something else? Just change the target string in the `eval()` 
 ### 🧪 Test
 
 ![alt](./assets/Screenshot%202025-04-09%20195638.png)
+
+### 🎥 Watch  the algoritm generates the word "genome" in action 
+
+<video src="./assets/genome_word_gen.mp4" width="320" height="240" controls></video>
