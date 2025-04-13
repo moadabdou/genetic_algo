@@ -67,4 +67,6 @@ Want it to evolve something else? Just change the target string in the `eval()` 
 
 ### 🎥 Watch  the algoritm generates the word "genome" in action 
 
-https://github.com/moadabdou/genetic_algo/blob/master/assets/genome_word_gen.mp4
+
+https://github.com/user-attachments/assets/1769b82a-e179-4962-8696-4fe1eda17385
+
